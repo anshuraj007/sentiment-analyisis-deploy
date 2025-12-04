@@ -25,7 +25,7 @@ def load_model_and_tokenizer():
         filename=MODEL_FILENAME
     )
     # Load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME,use_fast=False)
     # Load model architecture
     model = EmotionClassifier(model_name=MODEL_NAME, num_labels=len(EMOTIONS))
     # Load trained weights
